@@ -73,6 +73,8 @@ export default class Onboarding extends Component {
           currentPage={this.state.currentPage}
           onEnd={this.props.onEnd}
           onNext={this.goNext}
+          onLeft={this.props.onLeft}
+          leftText={this.props.leftText}
         />
       </View>
     );
@@ -90,6 +92,7 @@ Onboarding.propTypes = {
   showSkip: PropTypes.bool,
   showNext: PropTypes.bool,
   showDone: PropTypes.bool,
+  leftText: PropTypes.string,
 };
 
 Onboarding.defaultProps = {
@@ -97,4 +100,5 @@ Onboarding.defaultProps = {
   showSkip: true,
   showNext: true,
   showDone: true,
+  leftText: 'Skip',
 };
